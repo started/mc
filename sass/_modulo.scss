@@ -1,0 +1,188 @@
+.modulo{
+	&.info{
+		.item{
+			float: none;
+			margin: 0 0 15px;
+			width: 100%;
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
+	&.busca-categoria{
+		.item{
+			float: none;
+			margin: 0 0 15px !important;
+			width: 100%;
+			margin-left: 0 !important;
+			&:last-child{
+				margin: 0 !important;
+			}
+			&:first-of-type{
+				margin-left: 0 !important;
+			}
+			a{
+				display: block;
+				padding: 25px;
+			}
+		}	
+	}
+	&.marcas{
+		.titulo-3{
+			font-size: 25px;
+		}
+		.center-wrap{
+			> .wrap{
+				width: 100%;
+			}
+		}
+		.item{
+			padding: 5px;
+			width: 50%;
+			margin: 0;
+		}
+	}
+	&.ayuda{
+		.item{
+			float: none;
+			margin: 0 0 15px !important;
+			width: 100%;
+			margin-left: 0 !important;
+		}	
+	}
+	&.detalle-producto{
+		.col{
+			float: none;
+			width: 100%;
+		}
+		.imagen{
+			position: relative;
+			padding-left: 83px;
+			margin-bottom: 150px;
+		}
+		.promo{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			.icono{
+				float: none;
+				margin: 0;
+			}
+			h4{
+				margin-top: 15px;
+				float: none;
+			}
+		}
+		.apresentacao{
+			float: none;
+			// width: 100%;
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			left: 0;
+		}
+		#main-image-zoom{
+			float: none;
+			height: auto;
+			overflow: hidden;
+			width: 100%;
+			// padding-left: 83px;
+			img{
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+		}
+		.info{
+			overflow: hidden;
+			text-align: center;
+			.brandName{}
+			.productName{}
+			.stock{
+				overflow: hidden;
+				.plugin-preco{
+					.price-best-price{
+						float: none;
+					}
+				}
+				.cantidad{
+					display: inline-block;
+					vertical-align: middle;
+					float: none;
+				}
+				.btn{
+					&.agregar{
+						display: inline-block;
+						vertical-align: middle;
+						float: none;
+					}
+				}
+				.calcular{
+					padding: 20px 15px;
+				}
+			}
+			.calificacion{
+				text-align: center;
+				.vcenter{
+					&.wrap{
+						width: 40%;
+					} 
+				}
+				.barra{
+					float: none;
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+	&.caracteristicas{
+		text-align: center;
+		.detalle-tab{
+			.ui-tabs-nav{
+				li{
+					margin: 0 15px 10px;
+					a{
+						font-size: 14px;
+					}
+					.sep{
+						display: none;
+					}
+				}
+			}
+			#caracteristicas{
+				.group{
+					width: 100%;
+					&.Ficha-Tecnica{
+						width: 100%;
+					}
+				}
+				table{
+					display: table;
+					tbody{
+						width: 100%;
+					}
+					tr{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.ui-tabs-panel{
+			article{
+				img{
+					display: block;
+					height: auto;
+					width: 100%;
+					margin: 15px 0;
+				}
+				.texto{
+					width: 100%;
+					margin: 0;
+					padding: 10px 15px;
+				}
+			}
+		}
+	}
+}

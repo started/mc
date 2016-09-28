@@ -1,0 +1,62 @@
+.home-tabs {
+	margin-top: -35px;
+	.ui-tabs {
+		.ui-tabs-nav {
+			&.ui-widget-header{
+				width: 100%;
+			}
+			.icono{
+				background-repeat: no-repeat;
+				background-size: (780px/2) (428px/2);
+				height: (40px/2);
+  			width: (50px/2);
+  			&.medida{
+  				background-position: (-390px) (-214px);
+  			}
+  			&.categoria{
+  				background-position: 390px 214px;
+  			}
+			}
+			li.ui-state-default {
+				a{
+					font-size: 12px;
+					padding: 15px;
+				}
+				&.ui-tabs-active{
+					.icono{
+						&.medida{
+							background-position: -1px (-135px/2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.grupo-select-2 {
+	padding: 10px;
+	.col{
+		float: none;
+		width: 100%;
+		margin: 0 0 10px;
+		&:last-of-type{
+			width: 100%;
+			.tit{
+				display: none;
+			}
+		}
+	}
+	button{
+		position: relative;
+		width: 100%;
+		&:before{
+			content: "Buscar";
+			color: #000;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform:translate(-50%, -50%);
+		}
+	}
+}

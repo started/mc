@@ -1,0 +1,49 @@
+@import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+
+@import 'mixins';
+$xs: max-width 568px;
+
+@include breakpoint($xs) {
+	body{
+		overflow-x: hidden;
+	}
+	.center-wrap{
+		display: block;
+		width: 100%;
+	}
+	img{
+		display: block;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	.main{
+		// overflow: hidden;
+		float: none;
+		display: block;
+		margin-top: 98px !important;
+	}
+
+	.slider-principal {
+		.bx-wrapper {
+			.slider {
+				.box-banner{ 
+					a {
+						img{
+							max-width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	.center-wrap{
+		max-width: 100%;
+	}
+	@import 'header';
+	@import 'footer';
+	@import 'tabs';
+	@import 'modulo';
+}
+

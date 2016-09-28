@@ -1,0 +1,96 @@
+header{
+	float: none;
+	display: block;
+	@include clearfix();
+	.logo{
+		width: 150px;
+	}
+	.btn-productos{
+		display: block;
+		position: absolute;
+		top: 8px;
+		right: 0;
+		.icono{
+			top: 1px;
+			position: relative;
+			margin-right: 5px;
+			width: 23px;
+			height: 23px;
+			background-image: url(/arquivos/sprites.png);
+			background-position: -173px -190px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		p{
+			display: none;
+		}
+	}
+	.search{
+		&.stick{
+			background-color: #fff;
+			display: block;
+			position: absolute;
+			top: 100%;
+			// width: 100%;
+			padding: 5px;
+			margin: 5px 0 0;
+			left: 0;
+			right: 0;
+			margin-left: -5px;
+			margin-right: -5px;
+			input{
+			  font-size: 12pt;
+			  font-style: italic;
+			  font-weight: 100;
+			  font-family: 'Conv_DINNEXTLTPRO-LIGHTITALIC_1';
+			  background-color: #f8f8f8;
+			  padding: 8px;
+			  // width: 380px;
+			  width: 100%;
+			  line-height: 25px;
+			  padding-bottom: 4px;
+			}
+			button{
+			  background-color: #f8f8f8;
+			  border: 0;
+			  width: 37px;
+			  height: 37px;
+			  float: right;
+			  background-image: url(/arquivos/sprites.png);
+			  background-position: -136px -181px;
+			  position: absolute;
+			  top: 5px;
+			  right: 5px;
+			}
+		}	
+	}
+	.head{
+		padding: 5px;
+	}
+	&.stick{
+		.logo{
+			 width: 150px;
+			 height: auto;
+		}
+		.search{
+			&.stick{
+				display: none;
+			}
+		}
+		.btn-productos{
+			margin-right: 0;
+			p{
+				display: none;
+			}
+			.flecha{
+				display: none;
+			}
+		}
+		.head{
+			padding-bottom: 5px;
+		}
+	}
+	.menu-desplegable{
+		display: none;
+	}
+}

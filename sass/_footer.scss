@@ -1,0 +1,88 @@
+footer{
+	.grupo-1{
+		.col{
+			float: none;
+			width: 100%;
+		}
+		.medios{
+			margin: 0 0 15px;
+			text-align: center;
+			@include clearfix();
+			img{
+				float: none;
+				display: inline-block;
+				margin: 0 0 5px;
+				vertical-align: middle;
+			}
+		}
+		.newsletter{
+			text-align: center;
+			@include clearfix();
+			form{
+				overflow: hidden;
+				position: relative;
+				padding: 10px;
+				button{
+					width: 80px;
+					float: none;
+					position: absolute;
+					top: 10px;
+					right: 10px;
+				}
+				input{
+					padding-right: 90px;
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.grupo-2{
+		.col{
+			float: none;
+			width: 100%;
+			section{
+				padding: 10px;
+			}
+		}
+		.modulo-1{
+			img{
+				margin: 0 auto;
+			}
+			ul.info{
+				li{
+					margin: 0 0 15px;
+					text-align: center;
+					.icono{
+						display: inline-block;
+					}
+					p{
+						display: block;
+					}
+				}
+			}
+		}
+		
+		.modulo-2{
+			text-align: center;
+		}
+		.modulo-3{
+			text-align: center;
+			.row{
+				float: none;
+			}
+		}
+	}
+	.grupo-3{
+		text-align: center;
+		p{
+			float: none;
+			padding: 0 10px;
+		}
+		.logos{
+			float: none;
+			overflow: hidden;
+			margin: 15px 0 0;
+		}
+	}
+}
