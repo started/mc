@@ -1,4 +1,17 @@
 .modulo{
+	&.texto{
+		padding: 10px 15px;
+		text-align: center;
+	}
+	&.entrada{
+		.bread-crumb{
+			margin: 0 0 20px 0;
+			text-align: center;
+		}
+		.tit{
+			text-align: center;
+		}
+	}
 	&.info{
 		.item{
 			float: none;

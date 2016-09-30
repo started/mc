@@ -1,0 +1,52 @@
+.seccion{
+	&.contacto {
+		.main{
+			.modulo{
+				&.entrada{
+					.tit{
+						bottom: 0;
+						text-align: center;
+					}
+				}
+				&.contenido{
+					padding: 25px 15px;
+					.titulo-3{
+						text-align: center;
+						.linea-titulo{
+							margin: 0 auto;
+						}
+					}
+					.telefono{
+						.prefijo{
+							margin-right: 10px;
+						}
+						.numero{
+							width: 220px;
+						}
+					}
+					.dato{
+						text-align: center;
+						.icono{
+							display: block !important;
+							margin: 0 auto;
+						}
+					}
+					.wrap-campo{
+						.chosen-select{
+							width: 100%;
+						}
+					}
+				}
+			}
+			.col{
+				float: none;
+				margin: 0;
+				width: 100%;
+				@include clearfix();
+				&:first-child{
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
