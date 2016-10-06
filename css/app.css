@@ -596,6 +596,31 @@
     width: 100%;
   }
   .popup .wrap {
-    padding-top: 10px;
+    padding: 5px;
+  }
+  .popup.cuotas .pie .col-1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .popup.cuotas .pie .col-2 {
+    width: 100%;
+  }
+  .popup.cuotas .pie .btn {
+    float: none;
+    width: 100%;
+  }
+  .popup.envio .fondo-1 {
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 0px !important;
+    margin: 0px;
+  }
+  .popup.envio .head {
+    padding: 0px;
+  }
+  .popup.envio .head .btn {
+    width: 100%;
+    margin: 0px;
+    margin-top: 15px;
   }
 }
