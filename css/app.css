@@ -473,6 +473,10 @@
     float: none;
     width: 100%;
   }
+  .modulo.productos .items ul li .product {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
   .modulo.productos .items ul li img {
     width: 100%;
   }
@@ -490,6 +494,10 @@
     font-size: 40px;
     text-align: center;
     width: 100%;
+  }
+  .modulo.productos .items ul li a.buy {
+    margin-top: 60px;
+    position: inherit;
   }
   .seccion.contacto .main .modulo.entrada .tit {
     bottom: 0;
