@@ -263,6 +263,62 @@
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
+  .modulo.direcciones {
+    padding: 25px 15px;
+  }
+  .modulo.direcciones .row.direccion {
+    text-align: center;
+  }
+  .modulo.direcciones .row.direccion:first-of-type {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .modulo.direcciones .row.direccion .titulo-3 {
+    text-align: center;
+  }
+  .modulo.direcciones .row.direccion .vcenter {
+    display: block;
+    margin: 0 0 10px;
+  }
+  .modulo.direcciones .row.direccion .icono {
+    margin-right: 5px;
+  }
+  .modulo.paso {
+    padding: 25px 15px;
+    text-align: center;
+  }
+  .modulo.paso .num {
+    display: inline-block;
+    margin: 0 0 20px;
+    position: relative;
+  }
+  .modulo.paso .items.busca .item {
+    display: block;
+    margin: 0 auto 15px;
+  }
+  .modulo.paso .items.pasos .item .flecha {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    bottom: 0;
+    left: 0;
+    position: relative;
+  }
+  .modulo.paso .puntos {
+    float: none !important;
+    width: 100%;
+  }
+  .modulo.texto {
+    padding: 10px 15px;
+    text-align: center;
+  }
+  .modulo.entrada .bread-crumb {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  .modulo.entrada .tit {
+    text-align: center;
+  }
   .modulo.info .item {
     float: none;
     margin: 0 0 15px;
@@ -416,6 +472,91 @@
     width: 100%;
     margin: 0;
     padding: 10px 15px;
+  }
+  .seccion.contacto .main .modulo.entrada .tit {
+    bottom: 0;
+    text-align: center;
+  }
+  .seccion.contacto .main .modulo.contenido {
+    padding: 25px 15px;
+  }
+  .seccion.contacto .main .modulo.contenido .titulo-3 {
+    text-align: center;
+  }
+  .seccion.contacto .main .modulo.contenido .titulo-3 .linea-titulo {
+    margin: 0 auto;
+  }
+  .seccion.contacto .main .modulo.contenido .telefono .prefijo {
+    margin-right: 10px;
+  }
+  .seccion.contacto .main .modulo.contenido .telefono .numero {
+    width: 220px;
+  }
+  .seccion.contacto .main .modulo.contenido .dato {
+    text-align: center;
+  }
+  .seccion.contacto .main .modulo.contenido .dato .icono {
+    display: block !important;
+    margin: 0 auto;
+  }
+  .seccion.contacto .main .modulo.contenido .wrap-campo .chosen-select {
+    width: 100%;
+  }
+  .seccion.contacto .main .col {
+    float: none;
+    margin: 0;
+    width: 100%;
+    zoom: 1;
+  }
+  .seccion.contacto .main .col:before, .seccion.contacto .main .col:after {
+    content: "";
+    display: table;
+  }
+  .seccion.contacto .main .col:after {
+    clear: both;
+  }
+  .seccion.contacto .main .col:first-child {
+    margin-bottom: 30px;
+  }
+  .list-page .modulo.intro {
+    height: auto;
+  }
+  .list-page .modulo.resultado .txt {
+    float: none;
+    text-align: center;
+  }
+  .list-page .modulo.filtros .filters {
+    display: block;
+    padding: 10px 15px;
+  }
+  .list-page .modulo.filtros .filters .filter {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .list-page .modulo.filtros .filters .filter .selector {
+    width: 100%;
+  }
+  .list-page .modulo.filtros .filters .filter .selector.active .options {
+    z-index: 999;
+  }
+  .list-page .modulo.filtros .filter {
+    text-align: center;
+  }
+  .list-page .modulo.filtros .filter.orderby {
+    float: none;
+    display: block;
+  }
+  .list-page .modulo.filtros .filter.orderby .selector {
+    width: 100%;
+  }
+  .list-page .modulo.filtros .filter.orderby .selector.active .options {
+    z-index: 999;
+  }
+  .list-page.stick-filters .modulo.filtros {
+    position: relative;
   }
 }
 

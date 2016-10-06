@@ -1,0 +1,61 @@
+.list-page{
+		.modulo{
+			&.intro{
+				height: auto;
+			}
+			&.resultado{
+				.txt{
+					float: none;
+					text-align: center;
+				}
+			}
+			&.filtros{
+				.filters{
+					display: block;
+					padding: 10px 15px;
+					.filter{
+						display: block;
+						text-align: center;
+						margin-right: 0;
+						margin-bottom: 15px;
+						position: relative;
+						.selector{
+							width: 100%;
+							&.active{
+								.options{
+									z-index: 999;
+								}
+							}
+						}
+					}
+				}
+				.filter{
+					text-align: center;
+					&.orderby{
+						float: none;
+						display: block;
+						.selector{
+							width: 100%;
+							&.active{
+								.options{
+									z-index: 999;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.productos{
+				.items{
+					
+				}
+			}
+		}
+		&.stick-filters{
+			.modulo{
+				&.filtros{
+					position: relative;
+				}
+			}
+		}
+}

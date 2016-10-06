@@ -1,4 +1,57 @@
 .modulo{
+	&.direcciones{
+		padding: 25px 15px;
+		.row{
+			&.direccion{
+				text-align: center;
+				&:first-of-type{
+					margin-bottom: 0;
+					margin-top: 0;
+				}
+				.titulo-3{
+					text-align: center;
+				}
+				.vcenter{
+					display: block;
+					margin: 0 0 10px;
+				}
+				.icono{
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	&.paso{
+		padding: 25px 15px;
+		text-align: center;
+		.num{
+			display: inline-block;
+			margin: 0 0 20px;
+			position: relative;
+		}
+		.items{
+			&.busca{
+				.item{
+					display: block;
+					margin: 0 auto 15px;
+				}
+			}
+			&.pasos{
+				.item{
+					.flecha{
+						transform:rotate(90deg);
+						bottom: 0;
+						left: 0;
+						position: relative;
+					}
+				}
+			}
+		}
+		.puntos{
+			float: none !important;
+			width: 100%;
+		}
+	}
 	&.texto{
 		padding: 10px 15px;
 		text-align: center;
