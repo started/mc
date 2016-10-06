@@ -259,9 +259,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   .modulo.direcciones {
     padding: 25px 15px;
@@ -297,9 +295,7 @@
     margin: 0 auto 15px;
   }
   .modulo.paso .items.pasos .item .flecha {
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
     bottom: 0;
     left: 0;
     position: relative;
@@ -473,6 +469,28 @@
     margin: 0;
     padding: 10px 15px;
   }
+  .modulo.productos .items ul li {
+    float: none;
+    width: 100%;
+  }
+  .modulo.productos .items ul li img {
+    width: 100%;
+  }
+  .modulo.productos .items ul li .detalle {
+    margin: 0;
+  }
+  .modulo.productos .items ul li .detalle .tit {
+    font-size: 250%;
+    text-align: center;
+  }
+  .modulo.productos .items ul li .descripcion {
+    text-align: center;
+  }
+  .modulo.productos .items ul li .precio {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+  }
   .seccion.contacto .main .modulo.entrada .tit {
     bottom: 0;
     text-align: center;
@@ -559,5 +577,3 @@
     position: relative;
   }
 }
-
-/*# sourceMappingURL=app.css.map */

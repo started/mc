@@ -251,4 +251,34 @@
 			}
 		}
 	}
+	&.productos {
+		.items {
+			ul {
+				li {
+					float: none;
+					width: 100%;
+					img {
+						width: 100%;
+					}
+					.detalle{
+						margin: 0;
+						.tit {
+							font-size: 250%;
+							text-align: center;
+						}
+					}
+
+					.descripcion {
+						text-align: center;
+					}
+
+					.precio {
+						font-size: 40px;
+						text-align: center;
+						width: 100%;
+					}
+				}
+			} 
+		}
+	}
 }
