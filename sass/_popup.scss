@@ -6,15 +6,23 @@
 		}
 		.col-1 {
 			width: 100%;
-			margin-bottom: 10px; 
+			margin-bottom: 10px;
+			text-align: center;
 		}
 		.col-2 {
 			width: 100%;
 		}
 	}
 
+	.tit {
+		font-size: 16px;
+	}
+
 	.wrap {
-		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top:10px;
+		padding-bottom:5px;
 	}
 
 	&.cuotas {

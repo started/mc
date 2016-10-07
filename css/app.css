@@ -356,6 +356,9 @@
     width: 100%;
     margin-left: 0 !important;
   }
+  .modulo.detalle-producto .plugin-preco .valor-por {
+    float: none;
+  }
   .modulo.detalle-producto .col {
     float: none;
     width: 100%;
@@ -591,12 +594,19 @@
   .popup.agregar .col-1 {
     width: 100%;
     margin-bottom: 10px;
+    text-align: center;
   }
   .popup.agregar .col-2 {
     width: 100%;
   }
+  .popup .tit {
+    font-size: 16px;
+  }
   .popup .wrap {
-    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
   }
   .popup.cuotas .pie .col-1 {
     width: 100%;
