@@ -228,6 +228,27 @@
 					&.Ficha-Tecnica{
 						width: 100%;
 					}
+					&.Descripcion {
+						display: none;
+					}
+					&.Garantia {
+						display: none;
+					}
+					&.Fabricante{
+						display: none;
+					}
+					&.Medidas{
+						display: none;
+					}
+					&.Rendimiento {
+						display: none;
+					}
+					&.Tipo-de-Vehiculo {
+						display: none;
+					}
+					&.ficha-tecnica {
+						display: table;
+					}
 				}
 				table{
 					display: table;

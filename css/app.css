@@ -452,6 +452,27 @@
   .modulo.caracteristicas .detalle-tab #caracteristicas .group.Ficha-Tecnica {
     width: 100%;
   }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Descripcion {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Garantia {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Fabricante {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Medidas {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Rendimiento {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Tipo-de-Vehiculo {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.ficha-tecnica {
+    display: table;
+  }
   .modulo.caracteristicas .detalle-tab #caracteristicas table {
     display: table;
   }
