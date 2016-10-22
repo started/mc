@@ -6,6 +6,7 @@ $xs: max-width 568px;
 @include breakpoint($xs) {
 	body{
 		overflow-x: hidden;
+		margin-top: 0px !important;
 	}
 	.center-wrap{
 		display: block;
@@ -41,6 +42,18 @@ $xs: max-width 568px;
 	.center-wrap{
 		max-width: 100%;
 	}
+	.container{
+    	width: auto !important;
+	}
+
+	.ajax-content-loader{
+		display: none !important;
+	}
+
+	.barra-alerta vtex-call-center-operator{
+		display: none !important; 
+	}
+
 	@import 'header';
 	@import 'footer';
 	@import 'tabs';

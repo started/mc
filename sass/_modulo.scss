@@ -223,6 +223,8 @@
 				}
 			}
 			#caracteristicas{
+				margin-left: 10px;
+    			margin-right: 10px;
 				.group{
 					width: 100%;
 					&.Ficha-Tecnica{
@@ -248,6 +250,8 @@
 					}
 					&.ficha-tecnica {
 						display: table;
+						padding-left: 10px;
+						padding-right: 10px;
 					}
 				}
 				table{

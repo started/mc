@@ -1,6 +1,7 @@
 @media (max-width: 568px) {
   body {
     overflow-x: hidden;
+    margin-top: 0px !important;
   }
   .center-wrap {
     display: block;
@@ -23,6 +24,15 @@
   }
   .center-wrap {
     max-width: 100%;
+  }
+  .container {
+    width: auto !important;
+  }
+  .ajax-content-loader {
+    display: none !important;
+  }
+  .barra-alerta vtex-call-center-operator {
+    display: none !important;
   }
   header {
     float: none;
@@ -65,7 +75,7 @@
     position: absolute;
     top: 100%;
     padding: 5px;
-    margin: 5px 0 0;
+    margin: 40px 0 0;
     left: 0;
     right: 0;
     margin-left: -5px;
@@ -446,6 +456,10 @@
   .modulo.caracteristicas .detalle-tab .ui-tabs-nav li .sep {
     display: none;
   }
+  .modulo.caracteristicas .detalle-tab #caracteristicas {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .modulo.caracteristicas .detalle-tab #caracteristicas .group {
     width: 100%;
   }
@@ -472,6 +486,8 @@
   }
   .modulo.caracteristicas .detalle-tab #caracteristicas .group.ficha-tecnica {
     display: table;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .modulo.caracteristicas .detalle-tab #caracteristicas table {
     display: table;
