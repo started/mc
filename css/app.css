@@ -542,7 +542,7 @@
     width: 100%;
   }
   .modulo.productos .items ul li a.buy {
-    margin-top: 60px;
+    margin-top: 80px;
     position: inherit;
   }
   .seccion.contacto .main .modulo.entrada .tit {
@@ -675,5 +675,15 @@
     width: 100%;
     margin: 0px;
     margin-top: 15px;
+  }
+  .busqueda-vacia .empty-search {
+    width: auto;
+  }
+  .contactos {
+    position: absolute;
+    top: 0%;
+  }
+  .contactos a {
+    float: left;
   }
 }
