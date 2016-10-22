@@ -6,7 +6,7 @@ $xs: max-width 568px;
 @include breakpoint($xs) {
 	body{
 		overflow-x: hidden;
-		margin-top: 0px !important;
+		margin-top: 0px !important !important;
 	}
 	.center-wrap{
 		display: block;
@@ -23,6 +23,18 @@ $xs: max-width 568px;
 		float: none;
 		display: block;
 		margin-top: 98px !important;
+		.slider-principal {
+			&.wrap-slider-2 {
+				.bx-controls-direction {
+					.bx-prev{
+						left: 1%;
+					}
+					.bx-next{
+						right: 1%;
+					}
+				}
+			}
+		}
 	}
 
 	.slider-principal {
