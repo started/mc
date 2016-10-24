@@ -1,0 +1,31 @@
+.slider-principal{
+	.bx-wrapper {
+		.slider {
+			.box-banner{ 
+				a {
+					img{
+						max-width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	.bx-controls{
+		.bx-controls-direction{
+			.bx-next,
+			.bx-prev{
+				top: 0;
+			}
+			.bx-prev{
+				left: 1%;
+			}
+			.bx-next{
+				right: 1%;
+			}
+		}
+
+	}
+}
+
+

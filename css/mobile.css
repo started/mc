@@ -1,6 +1,7 @@
 @media (max-width: 568px) {
   body {
     overflow-x: hidden;
+    margin-top: 0px !important !important;
   }
   .center-wrap {
     display: block;
@@ -17,12 +18,21 @@
     display: block;
     margin-top: 98px !important;
   }
-  .slider-principal .bx-wrapper .slider .box-banner a img {
-    max-width: 100%;
-    height: auto;
-  }
   .center-wrap {
     max-width: 100%;
+  }
+  .container {
+    width: auto !important;
+  }
+  .ajax-content-loader {
+    display: none !important;
+  }
+  .barra-alerta vtex-call-center-operator {
+    display: none !important;
+  }
+  .client-pre-email .emailInfo {
+    width: 100%;
+    background-color: red;
   }
   header {
     float: none;
@@ -65,7 +75,7 @@
     position: absolute;
     top: 100%;
     padding: 5px;
-    margin: 5px 0 0;
+    margin: 40px 0 0;
     left: 0;
     right: 0;
     margin-left: -5px;
@@ -360,6 +370,9 @@
     width: 100%;
     margin-left: 0 !important;
   }
+  .modulo.detalle-producto .plugin-preco .valor-por {
+    float: none;
+  }
   .modulo.detalle-producto .col {
     float: none;
     width: 100%;
@@ -447,11 +460,38 @@
   .modulo.caracteristicas .detalle-tab .ui-tabs-nav li .sep {
     display: none;
   }
+  .modulo.caracteristicas .detalle-tab #caracteristicas {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .modulo.caracteristicas .detalle-tab #caracteristicas .group {
     width: 100%;
   }
   .modulo.caracteristicas .detalle-tab #caracteristicas .group.Ficha-Tecnica {
     width: 100%;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Descripcion {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Garantia {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Fabricante {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Medidas {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Rendimiento {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.Tipo-de-Vehiculo {
+    display: none;
+  }
+  .modulo.caracteristicas .detalle-tab #caracteristicas .group.ficha-tecnica {
+    display: table;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .modulo.caracteristicas .detalle-tab #caracteristicas table {
     display: table;
@@ -472,6 +512,36 @@
     width: 100%;
     margin: 0;
     padding: 10px 15px;
+  }
+  .modulo.productos .items ul li {
+    float: none;
+    width: 100%;
+  }
+  .modulo.productos .items ul li .product {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .modulo.productos .items ul li img {
+    width: 100%;
+  }
+  .modulo.productos .items ul li .detalle {
+    margin: 0;
+  }
+  .modulo.productos .items ul li .detalle .tit {
+    font-size: 250%;
+    text-align: center;
+  }
+  .modulo.productos .items ul li .descripcion {
+    text-align: center;
+  }
+  .modulo.productos .items ul li .precio {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  .modulo.productos .items ul li a.buy {
+    margin-top: 80px;
+    position: inherit;
   }
   .seccion.contacto .main .modulo.entrada .tit {
     bottom: 0;
@@ -557,6 +627,76 @@
   }
   .list-page.stick-filters .modulo.filtros {
     position: relative;
+  }
+  .popup.agregar .btn {
+    float: none;
+    width: 100%;
+  }
+  .popup.agregar .col-1 {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .popup.agregar .col-2 {
+    width: 100%;
+  }
+  .popup .tit {
+    font-size: 16px;
+  }
+  .popup .wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .popup.cuotas .pie .col-1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .popup.cuotas .pie .col-2 {
+    width: 100%;
+  }
+  .popup.cuotas .pie .btn {
+    float: none;
+    width: 100%;
+  }
+  .popup.envio .fondo-1 {
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 0px !important;
+    margin: 0px;
+  }
+  .popup.envio .head {
+    padding: 0px;
+  }
+  .popup.envio .head .btn {
+    width: 100%;
+    margin: 0px;
+    margin-top: 15px;
+  }
+  .busqueda-vacia .empty-search {
+    width: auto;
+  }
+  .contactos {
+    position: absolute;
+    top: 0%;
+  }
+  .contactos a {
+    float: left;
+  }
+  .slider-principal .bx-wrapper .slider .box-banner a img {
+    max-width: 100%;
+    height: auto;
+  }
+  .slider-principal .bx-controls .bx-controls-direction .bx-next,
+  .slider-principal .bx-controls .bx-controls-direction .bx-prev {
+    top: 0;
+  }
+  .slider-principal .bx-controls .bx-controls-direction .bx-prev {
+    left: 1%;
+  }
+  .slider-principal .bx-controls .bx-controls-direction .bx-next {
+    right: 1%;
   }
 }
 

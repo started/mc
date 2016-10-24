@@ -23,34 +23,9 @@ $xs: max-width 568px;
 		float: none;
 		display: block;
 		margin-top: 98px !important;
-		.slider-principal {
-			&.wrap-slider-2 {
-				.bx-controls-direction {
-					.bx-prev{
-						left: 1%;
-					}
-					.bx-next{
-						right: 1%;
-					}
-				}
-			}
-		}
 	}
 
-	.slider-principal {
-		.bx-wrapper {
-			.slider {
-				.box-banner{ 
-					a {
-						img{
-							max-width: 100%;
-							height: auto;
-						}
-					}
-				}
-			}
-		}
-	}
+	
 	.center-wrap{
 		max-width: 100%;
 	}
@@ -66,6 +41,12 @@ $xs: max-width 568px;
 		display: none !important; 
 	}
 
+
+	.client-pre-email .emailInfo{
+		width: 100%;
+		background-color: red;
+	}
+
 	@import 'header';
 	@import 'footer';
 	@import 'tabs';
@@ -74,5 +55,7 @@ $xs: max-width 568px;
 	@import 'list-page';
 	@import 'popup';
 	@import 'search';
+	@import 'slider-principal';
+
 }
 
