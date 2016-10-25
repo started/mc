@@ -129,6 +129,9 @@
   header .menu-desplegable {
     display: none;
   }
+  .detalle .header-detalle {
+    top: 80px;
+  }
   footer .grupo-1 .col {
     float: none;
     width: 100%;
@@ -369,9 +372,6 @@
     width: 100%;
     margin-left: 0 !important;
   }
-  .modulo.detalle-producto .plugin-preco .valor-por {
-    float: none;
-  }
   .modulo.detalle-producto .col {
     float: none;
     width: 100%;
@@ -423,6 +423,9 @@
   }
   .modulo.detalle-producto .info .stock .plugin-preco .price-best-price {
     float: none;
+    position: absolute;
+    margin-left: 85px;
+    margin-top: 0px;
   }
   .modulo.detalle-producto .info .stock .cantidad {
     display: inline-block;
@@ -545,6 +548,9 @@
     margin-top: 80px;
     position: inherit;
   }
+  .agregados {
+    margin-top: 0px;
+  }
   .seccion.contacto .main .modulo.entrada .tit {
     bottom: 0;
     text-align: center;
@@ -629,6 +635,9 @@
   }
   .list-page.stick-filters .modulo.filtros {
     position: relative;
+  }
+  .product-list .bx-wrapper .bx-viewport {
+    height: 390px !important;
   }
   .popup.agregar .btn {
     float: none;

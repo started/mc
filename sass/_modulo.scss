@@ -118,11 +118,6 @@
 		}	
 	}
 	&.detalle-producto{
-		.plugin-preco{
-			.valor-por{
-				float: none;
-			}
-		}
 		.col{
 			float: none;
 			width: 100%;
@@ -176,7 +171,10 @@
 				overflow: hidden;
 				.plugin-preco{
 					.price-best-price{
-						float: none;
+					    float: none;
+					    position: absolute;
+					    margin-left: 85px;
+					    margin-top: 0px;
 					}
 				}
 				.cantidad{
@@ -326,4 +324,8 @@
 			} 
 		}
 	}
+}
+
+.agregados {
+	margin-top: 0px;
 }
