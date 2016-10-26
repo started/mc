@@ -37,10 +37,11 @@ $xs: max-width 568px;
 		display: none !important;
 	}
 
-	.barra-alerta vtex-call-center-operator{
-		display: none !important; 
+	.barra-alerta 
+		{.vtex-call-center-operator{
+			display: none !important; 
+		}
 	}
-
 
 	.client-pre-email .emailInfo{
 		width: 100%;
@@ -56,6 +57,7 @@ $xs: max-width 568px;
 	@import 'popup';
 	@import 'search';
 	@import 'slider-principal';
+	@import 'cart';
 
 }
 
