@@ -1,5 +1,5 @@
 .container {
-	width:auto;
+	width:auto !important;
 }
 
 .container-cart {
@@ -102,8 +102,12 @@
 }
 
 .step {
-	.text input {
-		position:static !important;
+	.text {
+		input {
+			position:static !important;
+			width: 100%;
+			min-width: 100%;
+		}
 	}
 }
 
@@ -165,6 +169,7 @@ p {
 .cart-fixed {
 	margin:0;
 	width:100%;
+	position: static !important;
 }
 
 .mini-cart {
@@ -188,4 +193,16 @@ span{
 	&.error {
 		width:100% !important;
 	}
+}
+
+.body-order-form {
+	.row-fluid {
+		.mini-cart {
+			width:100%;
+		}
+	}
+}
+
+.link-print-cart{
+	margin-bottom: 10px;
 }
