@@ -94,3 +94,96 @@
 #btn-client-pre-email {
 	width:100%;
 }
+
+.orderform-template-holder {
+	.row-fluid .span6 {
+		width:100% !important;
+	}
+}
+
+.step {
+	.text input {
+		position:static !important;
+	}
+}
+
+input, select {
+	&.input-xlarge {
+		width:100%;
+		max-width: 100%;
+	}
+}
+
+input {
+	&.input-small {
+		width: 100%;
+	}
+
+	.input-micro {
+		width: 15%;
+	}
+}
+
+p {
+	&.input{
+		width:100%;
+	}
+	&.client-first-name {
+		width:100%;
+		margin-right:0;
+	}
+}
+
+.client-phone {
+    width: 100%;
+}
+
+.box-client-info-pf {
+	margin-right: 0;
+}
+
+#go-to-payment, #go-to-shipping, .address-save, .btn-go-to-payment {
+	width:100%;
+}
+
+#client-phone3 {
+	width:80%
+}
+
+#shipping-data {
+	margin: 0;
+	margin-top:20px;
+	float:none;
+}
+
+#payment-data {
+	margin: 0;
+}
+
+.cart-fixed {
+	margin:0;
+	width:100%;
+}
+
+.mini-cart {
+	tfoot {
+		width:100%;
+		tr {
+			width:100%;		
+		}
+	}
+	.table {
+		td {
+			font-size: 20px;
+		}
+		.totalizers-list {
+			width:100%;
+		}
+	}
+}
+
+span{
+	&.error {
+		width:100% !important;
+	}
+}
