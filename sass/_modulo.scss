@@ -282,6 +282,23 @@
 	}
 	&.productos {
 		margin-bottom:0px;
+
+		li {
+			.aclaracion {
+				text-align: center
+			}
+
+			.ex-precio {
+				display: inline-block;
+				margin-left:auto;
+				margin-right:auto;
+				margin-bottom:10px;
+				left:42%;
+				right:42%;
+				text-align: center
+			}
+		}
+
 		.items {
 			ul {
 				li {
