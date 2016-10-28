@@ -93,6 +93,30 @@ header{
 	.menu-desplegable{
 		display: none;
 	}
+	.nav-1{
+		display: block !important;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    margin-right: 42px;
+    margin-top: 5px !important;
+		ul{
+			li:not(:first-child){
+				display: none;
+			}
+			li{
+				.atencion{
+					display: block !important;
+					.info{
+						margin: 0 !important;
+						.tit{
+							display: block !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .detalle {
