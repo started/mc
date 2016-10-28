@@ -1,7 +1,7 @@
 @import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
 
 @import 'mixins';
-$xs: max-width 568px;
+$xs: max-width 736px;
 
 @include breakpoint($xs) {
 	body{
@@ -46,6 +46,11 @@ $xs: max-width 568px;
 	.client-pre-email .emailInfo{
 		width: 100%;
 		background-color: red;
+	}
+
+
+	.fancybox-wrap .fancybox-close, .popup.banco .btn.cerrar{
+		background-size:inherit;
 	}
 
 	@import 'header';
