@@ -3,10 +3,12 @@
 @import 'mixins';
 $xs: max-width 736px;
 
+
+
 @include breakpoint($xs) {
 	body{
 		overflow-x: hidden;
-		margin-top: 0px !important !important;
+		margin-top: 0px !important;
 	}
 	.center-wrap{
 		display: block;
@@ -65,5 +67,34 @@ $xs: max-width 736px;
 	@import 'cart';
 	@import 'orders';
 
+}
+@include breakpoint(max-width 360px) {
+	header{
+		.logo{
+			margin-top: 7px;
+			width: 110px !important;
+		}
+		.nav-1{
+			ul{
+				li{
+					.atencion{
+						.info{
+							.tit{
+								display: block !important;
+								font-size: 12px;
+								margin-top: 9px;
+							}
+						}
+						.flecha{
+							margin-top: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.hide{
+	display: none !important;
 }
 

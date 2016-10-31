@@ -28,7 +28,7 @@ var Marketcar = (function($, Fizzmod, window, undefined){
 		},
 
 		documentReady: function() {
-
+			self.menuMobile();
 			self.searchWord();
 			self.searchAutocomplete();
 			self.setChecboxes();
@@ -98,19 +98,33 @@ var Marketcar = (function($, Fizzmod, window, undefined){
 		setProductSliders: function(){
 			if($("body").hasClass("home") || $("body").hasClass("product")){
 				$(".helperComplement").remove();
-				$(".product-list > ul").bxSlider({
+
+				slider = $('.product-list > ul').bxSlider({
 					slideWidth:201,
 					minSlides:5,
 					maxSlides:5,
 					moveSlides:1
-				})
+				});
+				
 			}
 		},
 
 		search: function(e){
 			e.preventDefault();
+			console.log("SEARCH:")
+			console.log($this);
 			window.location.href = "/" + encodeURI($(this).find("input").val());
 		},
+
+		menuMobile: function(){
+			
+			$(".btn-productos").on('click', function(event) {
+				event.preventDefault();
+				console.log("click menu");
+				$('.menu-desplegable').toggleClass('show-menu');
+				$('.search.stick').toggleClass('hide');
+			});
+		}
 
 		searchWord: function(){
 			if (!($("body").hasClass("search-result") || $("body").hasClass("busqueda-vacia"))) return;
@@ -636,20 +650,22 @@ $(document).ready(function(){
 	//waypoints
 
 	$('#filtros-waypoint').waypoint(function(direction){
-		if(direction === 'down'){
-			Marketcar.headerShowed = true;
-			$("body").addClass('stick-filters');
-			if(window.location.href.indexOf("comparator") > -1){
-				$(".footer-productos").addClass('stick');
-				var topStick = window.innerHeight - 57 + "px";
-	            $('.footer-productos.stick').animate({'top' : topStick},300);
+		if ($(window).width() > 768) {
+			if(direction === 'down'){
+				Marketcar.headerShowed = true;
+				$("body").addClass('stick-filters');
+				if(window.location.href.indexOf("comparator") > -1){
+					$(".footer-productos").addClass('stick');
+					var topStick = window.innerHeight - 57 + "px";
+		            $('.footer-productos.stick').animate({'top' : topStick},300);
+				}
+			}else if(direction === 'up'){
+				Marketcar.headerShowed = false;
+				$("body").removeClass('stick-filters');
+	            $('.footer-productos.stick').animate({'top' : '100%'},300, function(){
+					$(".footer-productos").removeClass('stick');
+	            });
 			}
-		}else if(direction === 'up'){
-			Marketcar.headerShowed = false;
-			$("body").removeClass('stick-filters');
-            $('.footer-productos.stick').animate({'top' : '100%'},300, function(){
-				$(".footer-productos").removeClass('stick');
-            });
 		}
 	}, {
 	  offset: '0'
