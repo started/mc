@@ -44,7 +44,7 @@ var Marketcar = (function($, Fizzmod, window, undefined){
 			Fizzmod.MasterData.setStore("marketcar");
 
 			$(document)
-				.on("submit", "header .nav-2 .search, header.stick .search.stick", self.search)
+				.on("submit", "header .search", self.search)
 				.on("submit", "footer .newsletter form", self.suscribeNewsletter)
 				.on("click", "footer .retry", function(){
 					$("footer .newsletter").removeClass("hide");
@@ -124,7 +124,7 @@ var Marketcar = (function($, Fizzmod, window, undefined){
 				$('.menu-desplegable').toggleClass('show-menu');
 				$('.search.stick').toggleClass('hide');
 			});
-		}
+		},
 
 		searchWord: function(){
 			if (!($("body").hasClass("search-result") || $("body").hasClass("busqueda-vacia"))) return;

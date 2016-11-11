@@ -1,5 +1,6 @@
 .home-tabs {
-	margin-top: -35px;
+	// margin-top: -35px;
+	margin-top: 0;
 	.ui-tabs {
 		.ui-tabs-nav {
 			&.ui-widget-header{
@@ -8,13 +9,17 @@
 			.icono{
 				background-repeat: no-repeat;
 				background-size: (780px/2) (428px/2);
-				height: (40px/2);
-  			width: (50px/2);
+  			margin-top: 6px;
   			&.medida{
-  				background-position: (-390px) (-214px);
+  				background-position: (-1px/2) (-86px/2);
+  				// background-position: (-1px/2) (-135px/2);
+  				height: (40px/2);
+  				width: (50px/2);
   			}
   			&.categoria{
-  				background-position: 390px 214px;
+  				background-position: (-104px/2) (-86px/2);
+  				height: (40px/2);
+  				width: (40px/2);
   			}
 			}
 			li.ui-state-default {
@@ -22,11 +27,32 @@
 					font-size: 12px;
 					padding: 15px;
 				}
-				&.ui-tabs-active{
+				&.ui-state-hover{
 					.icono{
 						&.medida{
-							background-position: -1px (-135px/2);
-						}
+		  				background-position: (-1px/2) (-37px/2) !important;
+		  				height: (40px/2);
+		  				width: (50px/2);
+		  			}
+						&.categoria{
+		  				background-position: (-104px/2) (-37px/2) !important; 
+		  				height: (40px/2);
+		  				width: (40px/2);
+		  			}
+					}
+				}
+				&.ui-state-active{
+					.icono{
+						&.medida{
+		  				background-position: (-1px/2) (-135px/2) !important;
+		  				height: (40px/2);
+		  				width: (50px/2);
+		  			}
+						&.categoria{
+		  				background-position: (-104px/2) (-135px/2) !important;
+		  				height: (40px/2);
+		  				width: (40px/2);
+		  			}
 					}
 				}
 			}
