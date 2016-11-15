@@ -254,230 +254,275 @@
         };
     return t.Comparator = h, h.initialize()
 }(jQuery, window);
+
 var Marketcar = function(e, t, o, a) {
     var r, i = {
-            initialize: function() {
-                return r = this, i.headerShowed = !1, r.mouseIsOverMenu = !1, r.mouseIsOverSubMenu = !1, r.productsArray = [], r.setHBHelpers(), e(document).ready(r.documentReady), r.chosenFilters = "{", r
-            },
-            documentReady: function() {
-                r.searchWord(), r.searchAutocomplete(), r.setChecboxes(), r.addArrows(), r.setMainSlider(), r.setFilters(), r.updateMiniCart(), r.setProductSliders(), e(".resultados").perfectScrollbar(), e("header .nav-1 .pre-cart ul").perfectScrollbar(), t.MasterData.setStore("marketcar"), e(document).on("submit", "header .search, header.stick .search.stick", r.search).on("submit", "footer .newsletter form", r.suscribeNewsletter).on("click", "footer .retry", function() {
-                    e("footer .newsletter").removeClass("hide"), e("footer .wrong-email, footer .fail").addClass("hide")
-                }).on("click", ".btn-mp", r.toggleMercadoPago).on("click", ".selector .label", n.toggleDisplay).on("click", ".selector .option", n.selectOption).on("click", "body", n.closeOnClickOutside).on("click", ".chosen-container .chosen-results li.active-result", r.chooseFilters).on("click", ".home #tabs-1 .col-4 button", function(e) {
-                    e.preventDefault(), r.sendFilters()
-                }).on("click", ".btn.chat", r.openChat).on("mouseenter", "header .nav-2.menu-desplegable", function() {
-                    r.mouseIsOverMenu = !0
-                }).on("mouseleave", "header .nav-2.menu-desplegable", function() {
-                    r.mouseIsOverMenu = !1, setTimeout(function() {
-                        r.mouseIsOverMenu || r.mouseIsOverSubMenu || !i.headerShowed || (e(".detalle .header-detalle").slideDown(), e(".list-page.stick-filters .modulo.filtros").css({
-                            visibility: "visible"
-                        }))
-                    }, 300)
-                }).on("mouseenter", "header .sub-menu.menu-desplegable", function() {
-                    r.mouseIsOverSubMenu = !0
-                }).on("mouseleave", "header .sub-menu.menu-desplegable", function() {
-                    r.mouseIsOverSubMenu = !1, setTimeout(function() {
-                        r.mouseIsOverMenu || r.mouseIsOverSubMenu || !i.headerShowed || (e(".detalle .header-detalle").slideDown(), e(".list-page.stick-filters .modulo.filtros").css({
-                            visibility: "visible"
-                        }))
-                    }, 300)
-                })
-            },
-            openChat: function() {
-                e(".zopim").eq(0).find("iframe").contents().find(".meshim_widget_components_chatButton_Button").click()
-            },
-            setProductSliders: function() {
-                console.log("home slider");
-                console.log($(window).width());
-                if ($(window).width() >= 1040) {
-                    console.log("mayor a 1040");
-                    (e("body").hasClass("home") || e("body").hasClass("product")) && (e(".helperComplement").remove(), e(".product-list > ul").bxSlider({
-                        slideWidth: 201,
-                        minSlides: 5,
-                        maxSlides: 5,
-                        moveSlides: 1
+        initialize: function() {
+            return r = this, i.headerShowed = !1, r.mouseIsOverMenu = !1, r.mouseIsOverSubMenu = !1, r.productsArray = [], r.setHBHelpers(), e(document).ready(r.documentReady), r.chosenFilters = "{", r
+        },
+        documentReady: function() {
+            r.menuMobile(), r.searchWord(), r.searchAutocomplete(), r.setChecboxes(), r.addArrows(), r.setMainSlider(), r.setFilters(), r.updateMiniCart(), r.setProductSliders(), e(".resultados").perfectScrollbar(), e("header .nav-1 .pre-cart ul").perfectScrollbar(), t.MasterData.setStore("marketcar"), e(document).on("submit", "header .search, header.stick .search.stick", r.search).on("submit", "footer .newsletter form", r.suscribeNewsletter).on("click", "footer .retry", function() {
+                e("footer .newsletter").removeClass("hide"), e("footer .wrong-email, footer .fail").addClass("hide")
+            }).on("click", ".btn-mp", r.toggleMercadoPago).on("click", ".selector .label", n.toggleDisplay).on("click", ".selector .option", n.selectOption).on("click", "body", n.closeOnClickOutside).on("click", ".chosen-container .chosen-results li.active-result", r.chooseFilters).on("click", ".home #tabs-1 .col-4 button", function(e) {
+                e.preventDefault(), r.sendFilters()
+            }).on("click", ".btn.chat", r.openChat).on("mouseenter", "header .nav-2.menu-desplegable", function() {
+                r.mouseIsOverMenu = !0
+            }).on("mouseleave", "header .nav-2.menu-desplegable", function() {
+                r.mouseIsOverMenu = !1, setTimeout(function() {
+                    r.mouseIsOverMenu || r.mouseIsOverSubMenu || !i.headerShowed || (e(".detalle .header-detalle").slideDown(), e(".list-page.stick-filters .modulo.filtros").css({
+                        visibility: "visible"
                     }))
-                }
-                if ($(window).width() <= 400) {
-                    console.log("menor a 400");
-                    (e("body").hasClass("home") || e("body").hasClass("product")) && (e(".helperComplement").remove(), e(".product-list > ul").bxSlider({
-                        slideWidth: 300,
-                        minSlides: 1,
-                        maxSlides: 1,
-                        moveSlides: 1
+                }, 300)
+            }).on("mouseenter", "header .sub-menu.menu-desplegable", function() {
+                r.mouseIsOverSubMenu = !0
+            }).on("mouseleave", "header .sub-menu.menu-desplegable", function() {
+                r.mouseIsOverSubMenu = !1, setTimeout(function() {
+                    r.mouseIsOverMenu || r.mouseIsOverSubMenu || !i.headerShowed || (e(".detalle .header-detalle").slideDown(), e(".list-page.stick-filters .modulo.filtros").css({
+                        visibility: "visible"
                     }))
-                }
-            },
-            search: function(t) {
-                t.preventDefault(), o.location.href = "/" + encodeURI(e(this).find("input").val())
-            },
-            searchWord: function() {
-                if (e("body").hasClass("search-result") || e("body").hasClass("busqueda-vacia")) {
-                    var t = "Sistema" != decodeURI(o.location.href.split("/")[3]) ? decodeURI(o.location.href.split("/")[3]) : o.location.href.split("=")[1];
-                    t.match(/(=|\{|\}|\?|\(|\)|:|\&)/g) ? e(".list-page .modulo.resultado .titulo-sessao").text("Resultados de Búsqueda") : (e(".busqueda-vacia .empty-search .search-word").text('"' + t + '"'), e(".list-page .modulo.resultado .titulo-sessao").text("Resultados de Búsqueda para: " + t))
-                }
-            },
-            searchAutocomplete: function() {
-                var t, o = function() {
-                    var e = 0;
-                    return function(t, o) {
-                        clearTimeout(e), e = setTimeout(t, o)
-                    }
-                }();
-                e("header .nav-2 .search input").keyup(function(r) {
-                    var i = e(this),
-                        n = e(".resultados"),
-                        s = i.val();
-                    "" != s ? o(function() {
-                        t != a && t.abort(), t = e.ajax({
-                            url: "/api/catalog_system/pub/products/search?ft=" + encodeURIComponent(s),
-                            type: "GET",
-                            beforeSend: function() {
-                                n.find(".item").remove(), n.removeClass("ready"), n.addClass("loading"), n.show()
-                            },
-                            success: function(t) {
-                                n.removeClass("loading"), n.addClass("ready"), t.length > 0 ? (e.each(t, function(e, t) {
-                                    n.append('<a href="' + t.link + '" class="item"><p>' + t.brand.toUpperCase() + " - " + t.productName.replace(" - ", " ") + "</p></a>")
-                                }), e(".resultados").perfectScrollbar("update")) : n.append('<p class="item">No se encontraron resultados</p>')
-                            }
-                        })
-                    }, 750) : (n.removeClass("ready loading"), n.hide())
-                }).focus(function(t) {
-                    e(".resultados").show()
-                }).click(function() {
-                    e(".resultados").show()
-                }), e(document).on("mouseleave", ".search", function() {
-                    e(".resultados").hide()
-                })
-            },
-            updateMiniCart: function() {
-                function o(o) {
-                    var r = 0;
-                    e.each(o.items, function(e) {
-                        r += o.items[e].quantity, a += o.items[e].price * o.items[e].quantity
-                    }), e("header .nav-1 .pre-cart .total .numero, header .nav-1 .carrito .info p+p").text(t.Utils.formatPrice(a / 100, ",", ".", 2, "$")), e("header .nav-1 .carrito .icono .num p").text(r)
-                }
-                e("header .nav-1 .pre-cart .script").length || e("header .nav-1 .pre-cart ul").before('<script id="item-mini-cart" type="text/x-jquery-tmpl"><li><a href="${link}"><img src="${img}" /></a><div class="detalle"><h2 class="tit productName">${name}</h2><h3 class="descripcion">${description}</h3><p class="cantidad">Cantidad: ${qty}</p><p class="precio bestPrice">${price}</p></div><div class="cerrar"></div></li></script>');
-                var a = 0;
-                vtexjs.checkout.getOrderForm().done(function(a) {
-                    var i;
-                    e("header .nav-1 .pre-cart ul").empty(), a.items.length ? e("header .nav-1 .pre-cart ul").addClass("has-items") : e("header .nav-1 .pre-cart ul").removeClass("has-items"), e.each(a.items, function(o) {
-                        var a = this;
-                        i = {
-                            skuId: a.id,
-                            name: a.name,
-                            description: a.additionalInfo.brandName,
-                            price: t.Utils.formatPrice(a.price / 100, ",", ".", 2),
-                            img: a.imageUrl,
-                            link: a.detailUrl,
-                            qty: a.quantity,
-                            index: o
-                        }, e("#item-mini-cart").tmpl(i).appendTo(e("header .nav-1 .pre-cart ul"))
-                    }), e("header .nav-1 .pre-cart ul li .cerrar").on("click", r.removeItemMiniCart), e("header .nav-1 .pre-cart ul.has-items").perfectScrollbar("update"), o(a)
-                })
-            },
-            removeItemMiniCart: function() {
-                var t = e(this).parents("li").data("index");
-                e(this).parent().children().css("opacity", ".3").end().prepend('<div class="cssload-loader"></div>'), vtexjs.checkout.getOrderForm().then(function(e) {
-                    var o = e.items[t];
-                    return o.index = t, vtexjs.checkout.removeItems([o])
-                }).done(function(e) {
-                    r.updateMiniCart()
-                })
-            },
-            setFilters: function() {
-                e("body").hasClass("home") && e.get("http://www.marketcar.vtexcommercestable.com.br/api/catalog_system/pub/facets/search/neumaticos/?map=c", function(t) {
-                    for (var o in t.SpecificationFilters)
-                        for (var a in t.SpecificationFilters[o]) {
-                            var r = t.SpecificationFilters[o];
-                            if (r[a].Name) {
-                                var a = r[a];
-                                e('#tabs-1 select[data-filter-name="' + o + '"]').append("<option data-filter-option=" + a.Name + " data-filter-link=" + a.Link + ">" + a.Name + "</option>")
-                            }
-                        }
-                    e("#tabs-1 select").each(function() {
-                        options = e(this).find("option"), options.sort(function(e, t) {
-                            return e = e.value, t = t.value, e - t
-                        }), e(this).html(options), e(this).prepend("<option selected>Seleccione...</option>")
-                    }), e(".chosen-select").chosen({
-                        disable_search_threshold: 10
-                    })
-                })
-            },
-            chooseFilters: function() {
-                if (!e("body").hasClass("mis-pedidos")) {
-                    var t = e(this).data("option-array-index"),
-                        o = e(this).parents(".col").find("select option").eq(t).data("filter-link").split("_")[1],
-                        a = e(this).parents(".col").find("select option").eq(t).data("filter-option");
-                    Number(a) || (a = -1 == a.indexOf(",") ? '"' + a + '"' : parseFloat(a.replace(",", "."))), 1 != r.chosenFilters.length ? (r.chosenFilters = r.chosenFilters.slice(0, -1), r.chosenFilters += ',"' + o + '":' + a) : r.chosenFilters += '"' + o + '":' + a, r.chosenFilters += "}"
-                }
-            },
-            sendFilters: function() {
-                r.chosenFilters.length > 1 && (o.location.href = "/neumaticos?filters=true&" + r.chosenFilters)
-            },
-            setHBHelpers: function() {
-                Handlebars.registerHelper("inc", function(e, t) {
-                    return parseInt(e) + 1
-                })
-            },
-            setMainSlider: function() {
-                var t = !1;
-                e("#main-slider").children().length > 1 && (t = !0), e("#main-slider").bxSlider({
-                    auto: !0,
-                    pause: 4e3,
-                    mode: "fade",
-                    controls: t
-                })
-            },
-            setChecboxes: function() {
-                e("input").iCheck({
-                    checkboxClass: "icheckbox",
-                    radioClass: "iradio",
-                    hoverClass: "ihover",
-                    labelHoverClass: "ihover"
-                })
-            },
-            addArrows: function() {
-                e(".modulo.detalle-producto .economia-de").append('<div class="punta"></div>')
-            },
-            toggleMercadoPago: function(t) {
-                t.preventDefault(), e(".mp").slideToggle("slow", "swing", function() {
-                    e(".wrap-scroll").getNiceScroll().resize(), e(".wrap-scroll").scrollTo(e(".wrap-scroll iframe"), 800)
-                })
-            },
-            onClickNav: function() {
-                e(this).data();
-                e(this).addClass("stores-nav-active"), e(".stores-nav-buttons").not(e(this)).removeClass("stores-nav-active"), e(".stores-subnav-buttons").removeClass("stores-subnav-active"), e(".stores-box").removeClass("stores-box-active")
-            },
-            suscribeNewsletter: function(o) {
-                o.preventDefault(), t.Utils.isEmail(e("footer .newsletter input").val()) ? t.MasterData.newsletter(e("footer .newsletter input").val()).done(function(t) {
-                    e("footer .newsletter").addClass("hide"), e("footer .success").removeClass("hide")
-                }).fail(function(t) {
-                    e("footer .newsletter").addClass("hide"), e("footer .fail").removeClass("hide")
-                }) : (e("footer .newsletter").addClass("hide"), e("footer .wrong-email").removeClass("hide"))
+                }, 300)
+            })
+        },
+        openChat: function() {
+            e(".zopim").eq(0).find("iframe").contents().find(".meshim_widget_components_chatButton_Button").click()
+        },
+        setProductSliders: function() {
+            console.log("home slider");
+            console.log($(window).width());
+            var slides = 1;
+            if ($(window).width() >= 1040) {
+                console.log("mayor a 1040");
+                var slides = 5;
+            }
+            if ($(window).width() <= 400) {
+                console.log("menor a 400");
+                 var slides = 1;
+                
+            }
+            (e("body").hasClass("home") || e("body").hasClass("product")) && (e(".helperComplement").remove(), e(".product-list > ul").bxSlider({
+                // slideWidth: 300,
+                minSlides: slides,
+                maxSlides: slides,
+                moveSlides: 1,
+                responsive: true,
+            }))
+        },
+        search: function(t) {
+            t.preventDefault(), o.location.href = "/" + encodeURI(e(this).find("input").val())
+        },
+        menuMobile: function(){
+            $(".btn-productos").on('click', function(event) {
+                event.preventDefault();
+                console.log("click menu");
+                $('.menu-desplegable').toggleClass('show-menu');
+                $('.search.stick').toggleClass('hide');
+            });
+        },
+        
+        searchWord: function() {
+            if (e("body").hasClass("search-result") || e("body").hasClass("busqueda-vacia")) {
+                var t = "Sistema" != decodeURI(o.location.href.split("/")[3]) ? decodeURI(o.location.href.split("/")[3]) : o.location.href.split("=")[1];
+                t.match(/(=|\{|\}|\?|\(|\)|:|\&)/g) ? e(".list-page .modulo.resultado .titulo-sessao").text("Resultados de Búsqueda") : (e(".busqueda-vacia .empty-search .search-word").text('"' + t + '"'), e(".list-page .modulo.resultado .titulo-sessao").text("Resultados de Búsqueda para: " + t))
             }
         },
-        n = {
-            slideSpeed: 250,
-            toggleDisplay: function() {
-                var t = e(this),
-                    o = t.closest(".selector");
-                o.toggleClass("active").children(".options").stop(!0, !0).slideToggle(n.slideSpeed, function() {
-                    e(this).css("overflow", "")
-                })
-            },
-            selectOption: function() {
-                var t = e(this);
-                t.closest(".selector").find(".label .value").text(t.text()).click()
-            },
-            closeOnClickOutside: function(t) {
-                e(".selector.active").each(function() {
-                    var o = e(this);
-                    o.has(t.target).length || o.removeClass("active").children(".options").stop(!0, !0).slideUp(n.slideSpeed)
-                })
+        searchAutocomplete: function() {
+            var t, o = function() {
+                var e = 0;
+                return function(t, o) {
+                    clearTimeout(e), e = setTimeout(t, o)
+                }
+            }();
+            e("header .nav-2 .search input").keyup(function(r) {
+                var i = e(this),
+                    n = e(".resultados"),
+                    s = i.val();
+                "" != s ? o(function() {
+                    t != a && t.abort(), t = e.ajax({
+                        url: "/api/catalog_system/pub/products/search?ft=" + encodeURIComponent(s),
+                        type: "GET",
+                        beforeSend: function() {
+                            n.find(".item").remove(), n.removeClass("ready"), n.addClass("loading"), n.show()
+                        },
+                        success: function(t) {
+                            n.removeClass("loading"), n.addClass("ready"), t.length > 0 ? (e.each(t, function(e, t) {
+                                n.append('<a href="' + t.link + '" class="item"><p>' + t.brand.toUpperCase() + " - " + t.productName.replace(" - ", " ") + "</p></a>")
+                            }), e(".resultados").perfectScrollbar("update")) : n.append('<p class="item">No se encontraron resultados</p>')
+                        }
+                    })
+                }, 750) : (n.removeClass("ready loading"), n.hide())
+            }).focus(function(t) {
+                e(".resultados").show()
+            }).click(function() {
+                e(".resultados").show()
+            }), e(document).on("mouseleave", ".search", function() {
+                e(".resultados").hide()
+            })
+        },
+        updateMiniCart: function() {
+            function o(o) {
+                var r = 0;
+                e.each(o.items, function(e) {
+                    r += o.items[e].quantity, a += o.items[e].price * o.items[e].quantity
+                }), e("header .nav-1 .pre-cart .total .numero, header .nav-1 .carrito .info p+p").text(t.Utils.formatPrice(a / 100, ",", ".", 2, "$")), e("header .nav-1 .carrito .icono .num p").text(r)
             }
-        };
+            e("header .nav-1 .pre-cart .script").length || e("header .nav-1 .pre-cart ul").before('<script id="item-mini-cart" type="text/x-jquery-tmpl"><li><a href="${link}"><img src="${img}" /></a><div class="detalle"><h2 class="tit productName">${name}</h2><h3 class="descripcion">${description}</h3><p class="cantidad">Cantidad: ${qty}</p><p class="precio bestPrice">${price}</p></div><div class="cerrar"></div></li></script>');
+            var a = 0;
+            vtexjs.checkout.getOrderForm().done(function(a) {
+                var i;
+                e("header .nav-1 .pre-cart ul").empty(), a.items.length ? e("header .nav-1 .pre-cart ul").addClass("has-items") : e("header .nav-1 .pre-cart ul").removeClass("has-items"), e.each(a.items, function(o) {
+                    var a = this;
+                    i = {
+                        skuId: a.id,
+                        name: a.name,
+                        description: a.additionalInfo.brandName,
+                        price: t.Utils.formatPrice(a.price / 100, ",", ".", 2),
+                        img: a.imageUrl,
+                        link: a.detailUrl,
+                        qty: a.quantity,
+                        index: o
+                    }, e("#item-mini-cart").tmpl(i).appendTo(e("header .nav-1 .pre-cart ul"))
+                }), e("header .nav-1 .pre-cart ul li .cerrar").on("click", r.removeItemMiniCart), e("header .nav-1 .pre-cart ul.has-items").perfectScrollbar("update"), o(a)
+            })
+        },
+        removeItemMiniCart: function() {
+            var t = e(this).parents("li").data("index");
+            e(this).parent().children().css("opacity", ".3").end().prepend('<div class="cssload-loader"></div>'), vtexjs.checkout.getOrderForm().then(function(e) {
+                var o = e.items[t];
+                return o.index = t, vtexjs.checkout.removeItems([o])
+            }).done(function(e) {
+                r.updateMiniCart()
+            })
+        },
+        setFilters: function() {
+            e("body").hasClass("home") && e.get("http://www.marketcar.vtexcommercestable.com.br/api/catalog_system/pub/facets/search/neumaticos/?map=c", function(t) {
+                for (var o in t.SpecificationFilters)
+                    for (var a in t.SpecificationFilters[o]) {
+                        var r = t.SpecificationFilters[o];
+                        if (r[a].Name) {
+                            var a = r[a];
+                            e('#tabs-1 select[data-filter-name="' + o + '"]').append("<option data-filter-option=" + a.Name + " data-filter-link=" + a.Link + ">" + a.Name + "</option>")
+                        }
+                    }
+                e("#tabs-1 select").each(function() {
+                    options = e(this).find("option"), options.sort(function(e, t) {
+                        return e = e.value, t = t.value, e - t
+                    }), e(this).html(options), e(this).prepend("<option selected>Seleccione...</option>")
+                }), e(".chosen-select").chosen({
+                    disable_search_threshold: 10
+                })
+            })
+        },
+        chooseFilters: function() {
+            if (!e("body").hasClass("mis-pedidos")) {
+                var t = e(this).data("option-array-index"),
+                    o = e(this).parents(".col").find("select option").eq(t).data("filter-link").split("_")[1],
+                    a = e(this).parents(".col").find("select option").eq(t).data("filter-option");
+                Number(a) || (a = -1 == a.indexOf(",") ? '"' + a + '"' : parseFloat(a.replace(",", "."))), 1 != r.chosenFilters.length ? (r.chosenFilters = r.chosenFilters.slice(0, -1), r.chosenFilters += ',"' + o + '":' + a) : r.chosenFilters += '"' + o + '":' + a, r.chosenFilters += "}"
+            }
+        },
+        chooseFiltersMobile: function() {
+            console.log("chose filter mobile");
+            if($("body").hasClass("mis-pedidos")) return;
+
+            $("#tabs-1 form select").each(function(index, el) {
+                $(el).on("change", function(){
+                    var optionSelected = $(this).find("option:selected");
+                    var i = $(optionSelected).data("option-array-index")
+                    var filter = $(this).find("option").eq(i).data("filter-link").split("_")[1];
+                    var option = $(this).find("option").eq(i).data("filter-option");
+
+                    if(!Number(option)){
+                        if(option.indexOf(",") == -1){
+                            option = '"' + option + '"';
+                        }
+                        else
+                            option = parseFloat(option.replace(",","."))
+                    }
+
+                    if(self.chosenFilters.length != 1){
+                        self.chosenFilters = self.chosenFilters.slice(0,-1);
+                        self.chosenFilters += ',"' + filter + '":' + option;
+                    }
+                    else
+                        self.chosenFilters += '"' + filter + '":' + option;
+
+                    self.chosenFilters += "}";
+
+                });
+            });             
+        },
+        sendFilters: function() {
+            if ($(window).width() < 768) {
+                console.log("chose->");
+                r.chooseFiltersMobile();
+            }
+            r.chosenFilters.length > 1 && (o.location.href = "/neumaticos?filters=true&" + r.chosenFilters)
+        },
+        setHBHelpers: function() {
+            Handlebars.registerHelper("inc", function(e, t) {
+                return parseInt(e) + 1
+            })
+        },
+        setMainSlider: function() {
+            var t = !1;
+            e("#main-slider").children().length > 1 && (t = !0), e("#main-slider").bxSlider({
+                auto: !0,
+                pause: 4e3,
+                mode: "fade",
+                controls: t
+            })
+        },
+        setChecboxes: function() {
+            e("input").iCheck({
+                checkboxClass: "icheckbox",
+                radioClass: "iradio",
+                hoverClass: "ihover",
+                labelHoverClass: "ihover"
+            })
+        },
+        addArrows: function() {
+            e(".modulo.detalle-producto .economia-de").append('<div class="punta"></div>')
+        },
+        toggleMercadoPago: function(t) {
+            t.preventDefault(), e(".mp").slideToggle("slow", "swing", function() {
+                e(".wrap-scroll").getNiceScroll().resize(), e(".wrap-scroll").scrollTo(e(".wrap-scroll iframe"), 800)
+            })
+        },
+        onClickNav: function() {
+            e(this).data();
+            e(this).addClass("stores-nav-active"), e(".stores-nav-buttons").not(e(this)).removeClass("stores-nav-active"), e(".stores-subnav-buttons").removeClass("stores-subnav-active"), e(".stores-box").removeClass("stores-box-active")
+        },
+        suscribeNewsletter: function(o) {
+            o.preventDefault(), t.Utils.isEmail(e("footer .newsletter input").val()) ? t.MasterData.newsletter(e("footer .newsletter input").val()).done(function(t) {
+                e("footer .newsletter").addClass("hide"), e("footer .success").removeClass("hide")
+            }).fail(function(t) {
+                e("footer .newsletter").addClass("hide"), e("footer .fail").removeClass("hide")
+            }) : (e("footer .newsletter").addClass("hide"), e("footer .wrong-email").removeClass("hide"))
+        }
+    },
+    n = {
+        slideSpeed: 250,
+        toggleDisplay: function() {
+            var t = e(this),
+                o = t.closest(".selector");
+            o.toggleClass("active").children(".options").stop(!0, !0).slideToggle(n.slideSpeed, function() {
+                e(this).css("overflow", "")
+            })
+        },
+        selectOption: function() {
+            var t = e(this);
+            t.closest(".selector").find(".label .value").text(t.text()).click()
+        },
+        closeOnClickOutside: function(t) {
+            e(".selector.active").each(function() {
+                var o = e(this);
+                o.has(t.target).length || o.removeClass("active").children(".options").stop(!0, !0).slideUp(n.slideSpeed)
+            })
+        }
+    };
     return i.initialize()
 }(jQuery, Fizzmod, window);
+
 $(document).ready(function() {
     function e(e) {
         slider = $("#slider-1-tab-" + e).bxSlider({

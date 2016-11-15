@@ -29,4 +29,57 @@
 	}
 }
 
+.seccion{
+	&.home{
+		.modulo{
+			&.productos{ 
+				li{
+					// width: 300px !important;
+					.productImage{
+						img{
+							margin: 0 auto;
+						}
+					}
+					.product-field{
+						ul{
+							li{
+								float: none;
+								width: 100%;
+							}
+						}
+					}
+					.ex-precio{
+						position: relative !important;
+						display: inline-block;
+						// width: 100%;
+						left: 0;
+						right: 0;
+						bottom: 0;
+					}
+					.precio{
+						position: static;
+						width: 100%;
+					}
+					a.buy{
+						left: 0;
+						position: static;
+					}
+					.detalle{
+						height: auto !important;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.wrap-slider-2 .bx-controls-direction .bx-prev{
+	left: 0;
+	margin-left: 10px;
+}
+.wrap-slider-2 .bx-controls-direction .bx-next{
+	right: 0;
+	margin-right: 10px;
+}
 
