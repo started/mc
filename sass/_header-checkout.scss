@@ -1,0 +1,29 @@
+.checkout-header{
+	height: 50px;
+	position: relative;
+	.container{
+		position: static;
+	}
+	.logo{
+		width: 110px;
+		top: 50%;
+		position: absolute;
+		transform: translateY(-50%);
+		margin-top: 0;
+	}
+	.safe-site{
+		line-height: 1.2;
+		margin-top: 5px;
+		.text{
+			font-size: 12px;
+			line-height: 1.2;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.locket{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+		}
+	}
+}

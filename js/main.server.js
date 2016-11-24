@@ -261,7 +261,7 @@ var Marketcar = function(e, t, o, a) {
             return r = this, i.headerShowed = !1, r.mouseIsOverMenu = !1, r.mouseIsOverSubMenu = !1, r.productsArray = [], r.setHBHelpers(), e(document).ready(r.documentReady), r.chosenFilters = "{", r
         },
         documentReady: function() {
-            r.menuMobile(), r.searchWord(), r.searchAutocomplete(), r.setChecboxes(), r.addArrows(), r.setMainSlider(), r.setFilters(), r.updateMiniCart(), r.setProductSliders(), e(".resultados").perfectScrollbar(), e("header .nav-1 .pre-cart ul").perfectScrollbar(), t.MasterData.setStore("marketcar"), e(document).on("submit", "header .search, header.stick .search.stick", r.search).on("submit", "footer .newsletter form", r.suscribeNewsletter).on("click", "footer .retry", function() {
+            r.menuMobile(), r.searchWord(), r.searchAutocomplete(), r.setChecboxes(), r.addArrows(), r.setMainSlider(), r.setFilters(),  r.chooseFiltersMobile(), r.updateMiniCart(), r.setProductSliders(), e(".resultados").perfectScrollbar(), e("header .nav-1 .pre-cart ul").perfectScrollbar(), t.MasterData.setStore("marketcar"), e(document).on("submit", "header .search, header.stick .search.stick", r.search).on("submit", "footer .newsletter form", r.suscribeNewsletter).on("click", "footer .retry", function() {
                 e("footer .newsletter").removeClass("hide"), e("footer .wrong-email, footer .fail").addClass("hide")
             }).on("click", ".btn-mp", r.toggleMercadoPago).on("click", ".selector .label", n.toggleDisplay).on("click", ".selector .option", n.selectOption).on("click", "body", n.closeOnClickOutside).on("click", ".chosen-container .chosen-results li.active-result", r.chooseFilters).on("click", ".home #tabs-1 .col-4 button", function(e) {
                 e.preventDefault(), r.sendFilters()
@@ -410,7 +410,17 @@ var Marketcar = function(e, t, o, a) {
                 }), e(".chosen-select").chosen({
                     disable_search_threshold: 10
                 })
-            })
+
+                if ($(window).width() < 736) {
+                    $("#tabs-1 form select").each(function(index, el) {
+                        $(el).find('option').each(function(index, el) {
+                            $(this).attr('data-option-array-index', index);
+                        });
+                    });
+                }
+            });
+
+
         },
         chooseFilters: function() {
             if (!e("body").hasClass("mis-pedidos")) {
@@ -422,40 +432,46 @@ var Marketcar = function(e, t, o, a) {
         },
         chooseFiltersMobile: function() {
             console.log("chose filter mobile");
-            if($("body").hasClass("mis-pedidos")) return;
+            if ($(window).width() < 736) {
+                
+                if($("body").hasClass("mis-pedidos")) return;
 
-            $("#tabs-1 form select").each(function(index, el) {
-                $(el).on("change", function(){
-                    var optionSelected = $(this).find("option:selected");
-                    var i = $(optionSelected).data("option-array-index")
-                    var filter = $(this).find("option").eq(i).data("filter-link").split("_")[1];
-                    var option = $(this).find("option").eq(i).data("filter-option");
+                $("#tabs-1 form select").each(function(index, el) {
 
-                    if(!Number(option)){
-                        if(option.indexOf(",") == -1){
-                            option = '"' + option + '"';
+                    $(el).on("change", function(){
+                        console.log("change");
+                        var optionSelected = $(this).find("option:selected");
+                        console.log(optionSelected);
+                        var i = $(optionSelected).data("option-array-index");
+                        console.log(i);
+                        var filter = $(this).find("option").eq(i).data("filter-link").split("_")[1];
+                        console.log(filter);
+                        var option = $(this).find("option").eq(i).data("filter-option");
+                        console.log(option);
+
+                        if(!Number(option)){
+                            if(option.indexOf(",") == -1){
+                                option = '"' + option + '"';
+                            }
+                            else
+                                option = parseFloat(option.replace(",","."))
+                        }
+
+                        if(r.chosenFilters.length != 1){
+                            r.chosenFilters = r.chosenFilters.slice(0,-1);
+                            r.chosenFilters += ',"' + filter + '":' + option;
                         }
                         else
-                            option = parseFloat(option.replace(",","."))
-                    }
+                            r.chosenFilters += '"' + filter + '":' + option;
 
-                    if(self.chosenFilters.length != 1){
-                        self.chosenFilters = self.chosenFilters.slice(0,-1);
-                        self.chosenFilters += ',"' + filter + '":' + option;
-                    }
-                    else
-                        self.chosenFilters += '"' + filter + '":' + option;
+                        r.chosenFilters += "}";
 
-                    self.chosenFilters += "}";
-
+                    });
                 });
-            });             
+            }
         },
         sendFilters: function() {
-            if ($(window).width() < 768) {
-                console.log("chose->");
-                r.chooseFiltersMobile();
-            }
+            
             r.chosenFilters.length > 1 && (o.location.href = "/neumaticos?filters=true&" + r.chosenFilters)
         },
         setHBHelpers: function() {

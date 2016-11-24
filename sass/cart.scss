@@ -1,0 +1,31 @@
+@import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import 'mixins';
+$xs: max-width 736px;
+@include breakpoint($xs) {
+	@import 'header-checkout';
+	// @import 'footer';
+	@import '_cart.scss';
+	.vtex-call-center-operator{
+		height: 28px;
+		overflow: hidden;
+		.vtex-call-center-user{
+			margin-left: -5px;
+			span{
+				&:first-child{
+					display: none;
+				}
+				&:last-child{
+					padding-left: 10px;
+				// 	&:before{
+				// 		content: "Usuario";
+				// 		display: inline-block;
+				// 		vertical-align: middle;
+				// 	}
+				}
+			}
+		}
+		.vtex-call-center-data{
+
+		}
+	}
+}

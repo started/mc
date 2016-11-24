@@ -24,7 +24,9 @@ $xs: max-width 736px;
 		// overflow: hidden;
 		float: none;
 		display: block;
-		margin-top: 98px !important;
+		// margin-top: 98px !important;
+		margin-top: 0 !important;
+		@include clearfix();
 	}
 
 	
@@ -64,15 +66,15 @@ $xs: max-width 736px;
 	@import 'popup';
 	@import 'search';
 	@import 'slider-principal';
-	@import 'cart';
+	@import '_cart';
 	@import 'orders';
 
 }
 @include breakpoint(max-width 360px) {
 	header{
 		.logo{
-			margin-top: 7px;
-			width: 110px !important;
+			// margin-top: 7px;
+			// width: 110px !important;
 		}
 		.nav-1{
 			ul{
@@ -81,7 +83,7 @@ $xs: max-width 736px;
 						.info{
 							.tit{
 								display: block !important;
-								font-size: 12px;
+								font-size: 12px !important;
 								margin-top: 9px;
 							}
 						}
@@ -92,6 +94,9 @@ $xs: max-width 736px;
 				}
 			}
 		}
+	}
+	.home-tabs .ui-tabs .ui-tabs-nav li.ui-state-default a{
+		font-size: 9px;
 	}
 }
 .hide{
