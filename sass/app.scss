@@ -9,6 +9,17 @@ $xs: max-width 736px;
 	body{
 		overflow-x: hidden;
 		margin-top: 0px !important;
+		&.detalle{
+			.fancybox-overlay{
+				.fancybox-wrap{
+					top: 50% !important;
+					transform: translate(0, -50%);
+				}
+				.fancybox-inner{
+					height: auto !important;
+				}
+			}
+		}
 	}
 	.center-wrap{
 		display: block;
@@ -68,6 +79,8 @@ $xs: max-width 736px;
 	@import 'slider-principal';
 	@import '_cart';
 	@import 'orders';
+	@import 'mis-pedidos';
+
 
 }
 @include breakpoint(max-width 360px) {

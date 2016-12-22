@@ -1,0 +1,91 @@
+.vtexIdUI{
+	height: auto !important;
+	width: 90% !important;
+	top: 50%;
+	transform: translate(0, -50%);
+	// min-height: auto !important;
+	.vtexIdUI-heading{
+		line-height: 1.3;
+	}
+	.modal-header{
+		padding: 15px !important;
+		h4{
+			height: auto !important;
+			line-height: 1.2 !important;
+		}
+	}
+	.btn-success,
+	.btn-block{
+		font-size: 14px !important;
+	}
+	.vtexIdUI-send-email {
+		span{
+			&:before{
+				font-size: 11px;
+		    margin-left: 28px;
+			}
+		}
+	}
+	.vtexIdUI-back-link{
+		position: absolute;
+    margin-top: 15px;
+    z-index: 2344;
+    bottom: 0;
+	}
+	.modal-footer{
+		overflow: auto;
+	}
+	form{
+		padding-bottom: 40px;
+		position: relative;
+	}
+	label{
+		margin-bottom: 10px !important;
+	}
+	.dead-link:not(.vtexIdUI-back-link){
+		font-size: 11px !important;
+	}
+}
+.vtexIdUI-confirm-email {
+	.btn-success{
+		position: static !important;
+	}
+}
+
+#vtexIdUI-classic-login h4{
+	line-height: 1.2 !important;
+}
+
+#vtexIdUI-change-pswd,
+#vtexIdUI-classic-login,
+#vtexIdUI-confirm-access-code,
+.vtexIdUI-confirm-email{
+	&:before{
+		line-height: 1.4;
+		padding: 5px 0;
+	}
+}
+
+.vtexIdUI-classic-login,
+.vtexIdUI-confirm-email{
+	padding: 10px 0 0;
+}
+
+#vtexIdUI-change-pswd .modal-header,
+#vtexIdUI-classic-login .modal-header,
+#vtexIdUI-confirm-access-code .modal-header,
+.vtexIdUI-confirm-email .modal-header{
+	&:before{
+		top: -35px;
+	}
+}
+
+#vtexIdUI-change-pswd .btn-success,
+#vtexIdUI-classic-login .btn-success{
+	display: block;
+	width: 100% !important;
+}
+
+
+
+

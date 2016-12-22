@@ -46,11 +46,11 @@
 			}
 		}
 		&.productos{
-			.items{
-				
+			li{
+				.comparar{
+					display: none;
+				}
 			}
-
-			
 		}
 	}
 	&.stick-filters{

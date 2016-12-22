@@ -118,6 +118,9 @@
 		}	
 	}
 	&.detalle-producto{
+		.segura{
+			margin-left: 0;
+		}
 		.col{
 			float: none;
 			width: 100%;
@@ -292,13 +295,19 @@
 			}
 
 			.ex-precio {
-				display: inline-block;
+				display: block;
 				margin-left:auto;
 				margin-right:auto;
 				margin-bottom:10px;
-				left:42%;
-				right:42%;
-				text-align: center
+				position: relative !important;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: inline-block;
+
+				// left:42%;
+				// right:42%;
+				// text-align: center
 			}
 		}
 
@@ -307,16 +316,15 @@
 				li {
 					float: none;
 					width: 100%;
-
 					.product {
 						margin-right: 20px;
-    					margin-left: 20px;
+  					margin-left: 20px;
 					}
-					
 					img {
 						width: 100%;
 					}
 					.detalle{
+						text-align: center;
 						margin: 0;
 						.tit {
 							font-size: 250%;
@@ -332,11 +340,14 @@
 						font-size: 40px;
 						text-align: center;
 						width: 100%;
+						left: 0;
+						position: static;
+						line-height: 1.2;
 					}
 
 					a {
 						&.buy {
-							margin-top: 80px;
+							margin-top: 10px;
 							position: inherit;
 						}
 					}

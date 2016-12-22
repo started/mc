@@ -91,7 +91,7 @@ header{
 	}
 	&.stick{
 		.logo{
-			 width: 95px;
+			 width: 110px;
 			 height: auto;
 		}
 		.search{
@@ -129,6 +129,9 @@ header{
 			padding-bottom: 5px;
 		}
 		.nav-1{
+			.info{
+				margin-top: 0 !important;
+			}
 			>ul{
 				>li{
 					float: left;
@@ -298,6 +301,8 @@ header{
 	.header-detalle {
 		top: 80px;
 		display: none !important;
+		z-index: -1;
+		opacity: 0;
 	}
 }
 
